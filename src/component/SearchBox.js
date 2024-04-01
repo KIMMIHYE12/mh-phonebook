@@ -14,7 +14,7 @@ const SearchBox = () => {
   return (
     <Form onSubmit={searchByName}>
       <Row>
-        <Col lg={10}>
+        <Col>
           <Form.Control
             type='text'
             placeholder='이름을 입력해주세요'
@@ -22,7 +22,7 @@ const SearchBox = () => {
             className='text_field'
           />
         </Col>
-        <Col lg={2}>
+        <Col>
           <Button variant='primary' type='submit' className='btn_search'>
             검색하기
           </Button>

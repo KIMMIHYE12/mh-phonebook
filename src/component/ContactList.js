@@ -22,12 +22,15 @@ const ContactList = () => {
     <div>
       <div className='search_box_content'>
         <SearchBox />
-        <span className='total'>총 인원: {filteredList.length} 명</span>
+        <span className='total'>
+          <strong>총 인원: </strong>
+          {filteredList.length} 명
+        </span>
       </div>
 
-      <Row className='card_list'>
+      <Row>
         {filteredList.map((item, index) => (
-          <Col lg={4}>
+          <Col md={4} sm={6} xs={12} className='card_list'>
             <ContactItem item={item} key={index} />
           </Col>
         ))}

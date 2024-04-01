@@ -6,8 +6,10 @@ const ContactItem = ({ item }) => {
       <div className='card_photo'>
         <img src={item.uploadImgUrl} alt={`${item.name} 프로필 사진`} />
       </div>
-      <div className='name'>{item.name}</div>
-      <div className='phone'>{item.phoneNumber}</div>
+      <div className='card_info'>
+        <div className='name'>{item.name}</div>
+        <div className='phone'>{item.phoneNumber}</div>
+      </div>
     </div>
   );
 };
