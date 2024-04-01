@@ -1,3 +1,174 @@
+@font-face {
+  font-family: "JGaegujaengyi-Medium-KO";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JGaegujaengyi-Medium-KO.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "JGaegujaengyi-Medium-KO";
+}
+
 .title {
   text-align: center;
+  font-weight: bold;
+}
+
+/*연락처 입력 필드*/
+.cotent .contact_add_warp {
+  padding: 24px 16px 42px;
+  border: 2px solid #333;
+  border-radius: 32px;
+  box-shadow: rgb(151, 209, 175) 1px 3px 0px 0px, #222222 3px 5px 0px 0px;
+}
+
+.input_items {
+  margin-bottom: 16px;
+}
+
+.profile_photo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.profile_photo img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 2px solid #333;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.form-control {
+  border: 2px solid #333;
+}
+
+input[type="file"] {
+  position: relative;
+  width: 72px;
+  height: 36px;
+  padding: 0;
+  margin-left: 8px;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 13px;
+  background: #4fb1b1;
+  font-size: 0;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "사진 선택";
+  font-family: "SUITE-Regular";
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+.form-control.text_field {
+  border: 2px solid #333;
+  border-radius: 13px;
+}
+
+.form-label.label {
+  margin: 0 0 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.cotent .contact_add_warp .btn_add {
+  width: 100%;
+  margin-top: 32px;
+  padding: 8px 0;
+  font-size: 0.8rem;
+  font-family: "SUITE-Regular";
+  font-weight: 900;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 13px;
+  background: #4fb1b1;
+  letter-spacing: 0.02rem;
+}
+
+/*연락처 검색 필드*/
+.cotent .contact_search_warp {
+  height: 100%;
+  padding: 24px 24px 42px;
+  border: 2px solid #333;
+  border-radius: 32px;
+  box-shadow: #d5bedb 1px 3px 0px 0px, #222222 3px 5px 0px 0px;
+}
+
+.search_box_content {
+  display: flex;
+  width: 100%;
+  margin-bottom: 32px;
+  justify-content: space-around;
+}
+
+.cotent .contact_search_warp .btn_search {
+  width: 120px;
+  height: 100%;
+  background-color: #d5bedb;
+  border: 2px solid #333;
+  border-radius: 13px;
+  color: #222;
+  font-size: 0.8rem;
+  font-family: "SUITE-Regular";
+  font-weight: 700;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+}
+
+.card_content {
+  padding: 32px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #333;
+  border-radius: 32px;
+}
+
+.card_photo {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.card_photo img {
+  width: 100%;
+}
+
+.name {
+  margin-top: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.phone {
+  font-size: 1.25rem;
 }

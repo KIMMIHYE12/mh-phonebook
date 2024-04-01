@@ -8,13 +8,17 @@ function App() {
   return (
     <div>
       <h1 className='title'>Phone Book</h1>
-      <Container>
+      <Container className='cotent'>
         <Row>
-          <Col>
-            <ContactForm />
+          <Col lg={3}>
+            <div className='contact_add_warp'>
+              <ContactForm />
+            </div>
           </Col>
-          <Col>
-            <ContactList />
+          <Col lg={9}>
+            <div className='contact_search_warp'>
+              <ContactList />
+            </div>
           </Col>
         </Row>
       </Container>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import ContactItem from "./ContactItem";
 import SearchBox from "./SearchBox";
@@ -19,13 +20,18 @@ const ContactList = () => {
   }, [filterName, contactList]);
   return (
     <div>
-      <SearchBox />
-      <div>
-        갯수: {filteredList.length}
-        {filteredList.map((item, index) => (
-          <ContactItem item={item} key={index} />
-        ))}
+      <div className='search_box_content'>
+        <SearchBox />
+        <span className='total'>총 인원: {filteredList.length} 명</span>
       </div>
+
+      <Row className='card_list'>
+        {filteredList.map((item, index) => (
+          <Col lg={4}>
+            <ContactItem item={item} key={index} />
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 };
